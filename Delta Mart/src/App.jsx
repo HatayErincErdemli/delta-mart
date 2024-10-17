@@ -1,11 +1,10 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import "./App.css";
+import ProductCard from "./components/ProductCard";
 
 function App() {
   return (
     <>
-      <Button>Click me</Button>
+      <ProductCard />
     </>
   );
 }
