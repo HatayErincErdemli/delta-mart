@@ -1,11 +1,17 @@
 import "./App.css";
-import ProductCard from "./components/ProductCard";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Header from "./layout/Header";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <>
-      <ProductCard />
-    </>
+    <div className="App">
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
+    </div>
   );
 }
 
