@@ -7,7 +7,7 @@ function Header() {
 
   return (
     <header className="bg-gray-800 text-white p-4">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-6xl px-4">
         {/* Top row */}
         <div className="flex justify-between items-center">
           <Link to="/" className="text-xl font-bold">
@@ -32,7 +32,7 @@ function Header() {
 
         {/* Main navigation */}
         <nav className="mt-4">
-          <ul className="flex flex-col space-y-2">
+          <ul className="flex flex-col items-center md:flex-row md:justify-center space-y-2 md:space-y-0 md:space-x-6">
             <li>
               <Link to="/" className="block hover:text-gray-300">
                 Home
@@ -58,7 +58,7 @@ function Header() {
 
         {/* Mobile menu */}
         <nav className={`mt-4 ${isMenuOpen ? "block" : "hidden"} md:hidden`}>
-          <ul className="flex flex-col space-y-2">
+          <ul className="flex flex-col items-center space-y-2">
             <li>
               <Link to="/account" className="block hover:text-gray-300">
                 Account
