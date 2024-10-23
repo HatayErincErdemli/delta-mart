@@ -39,8 +39,8 @@ function Header() {
               </Link>
             </li>
             <li>
-              <Link to="/products" className="block hover:text-gray-300">
-                Products
+              <Link to="/shop" className="block hover:text-gray-300">
+                Shop
               </Link>
             </li>
             <li>
