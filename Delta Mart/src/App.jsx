@@ -1,9 +1,10 @@
 import "./App.css";
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Header from "./layout/Header";
+
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/shop" component={ShopPage} />
+        <Route path="/product/:id" component={ProductDetail} />
       </Switch>
     </div>
   );

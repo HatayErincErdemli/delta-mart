@@ -1,8 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function ProductCard({ name, description, price, image }) {
+function ProductCard({ name, description, price, image, id }) {
   return (
-    <div className=" rounded overflow-hidden shadow-lg bg-white">
+    <Link
+      to={`/product/${id}`}
+      className="block rounded overflow-hidden shadow-lg bg-white hover:shadow-xl transition-shadow"
+    >
       <img className="w-full h-48 object-cover" src={image} alt={name} />
       <div className="px-6 py-4">
         <h3 className="font-bold text-xl mb-2 text-gray-800">{name}</h3>
@@ -15,7 +19,7 @@ function ProductCard({ name, description, price, image }) {
           <div className="w-4 h-4 rounded-full bg-black"></div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
