@@ -1,16 +1,17 @@
-import React from "react";
-import Header from "../layout/Header";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ProductDetail() {
+  const [activeTab, setActiveTab] = useState("description");
+
   return (
     <>
-      <Header />
       <div className="py-8 px-4 md:px-6 lg:px-8 container mx-auto max-w-6xl">
         {/* Breadcrumb */}
         <div className="flex items-center text-sm text-gray-500 mb-8">
-          <span>Home</span>
+          <Link to="/">Home</Link>
           <span className="mx-2">/</span>
-          <span>Shop</span>
+          <Link to="/shop">Shop</Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -93,17 +94,46 @@ function ProductDetail() {
         {/* Product Tabs */}
         <div className="mt-16">
           <div className="flex border-b border-gray-200">
-            <button className="px-6 py-3 text-blue-500 border-b-2 border-blue-500">
+            <button
+              className={`px-6 py-3 ${
+                activeTab === "description"
+                  ? "text-blue-500 border-b-2 border-blue-500"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+              onClick={() => setActiveTab("description")}
+            >
               Description
             </button>
-            <button className="px-6 py-3 text-gray-500 hover:text-gray-700">
+            <button
+              className={`px-6 py-3 ${
+                activeTab === "additional"
+                  ? "text-blue-500 border-b-2 border-blue-500"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+              onClick={() => setActiveTab("additional")}
+            >
               Additional Information
             </button>
-            <button className="px-6 py-3 text-gray-500 hover:text-gray-700">
+            <button
+              className={`px-6 py-3 ${
+                activeTab === "reviews"
+                  ? "text-blue-500 border-b-2 border-blue-500"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+              onClick={() => setActiveTab("reviews")}
+            >
               Reviews (0)
             </button>
           </div>
-          <div className="py-6">{/* Tab content will go here */}</div>
+          <div className="py-6">
+            {activeTab === "description" && (
+              <p>This is the product description content.</p>
+            )}
+            {activeTab === "additional" && (
+              <p>This is the additional information content.</p>
+            )}
+            {activeTab === "reviews" && <p>This is the reviews content.</p>}
+          </div>
         </div>
       </div>
     </>
