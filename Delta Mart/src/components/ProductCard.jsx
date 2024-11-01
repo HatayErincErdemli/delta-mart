@@ -7,7 +7,11 @@ function ProductCard({ name, description, price, image, id }) {
       to={`/product/${id}`}
       className="block rounded overflow-hidden shadow-lg bg-white hover:shadow-xl transition-shadow"
     >
-      <img className="w-full h-48 object-cover" src={image} alt={name} />
+      <img
+        className="w-full h-48 object-cover"
+        src={"https://picsum.photos/200/300"}
+        alt={name}
+      />
       <div className="px-6 py-4">
         <h3 className="font-bold text-xl mb-2 text-gray-800">{name}</h3>
         <p className="text-gray-600 text-sm mb-2">{description}</p>

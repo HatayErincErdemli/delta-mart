@@ -53,6 +53,16 @@ function Header() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link to="/aboutUs" className="block hover:text-gray-300">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link to="/team" className="block hover:text-gray-300">
+                Team
+              </Link>
+            </li>
           </ul>
         </nav>
 

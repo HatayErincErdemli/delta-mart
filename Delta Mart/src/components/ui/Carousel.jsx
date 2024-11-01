@@ -43,8 +43,8 @@ export default function ProductCarousel() {
   const currentProduct = products[currentIndex];
 
   return (
-    <div className="w-full max-w-sm mx-auto bg-emerald-600 text-white rounded-lg overflow-hidden">
-      <div className="p-6 space-y-4">
+    <div className="w-full bg-emerald-600 text-white rounded-lg overflow-hidden flex flex-col md:flex-row">
+      <div className="p-6 space-y-4 flex-1">
         <p className="text-sm font-semibold">{currentProduct.season}</p>
         <h2 className="text-3xl font-bold">{currentProduct.name}</h2>
         <p className="text-sm">{currentProduct.description}</p>
@@ -71,7 +71,7 @@ export default function ProductCarousel() {
           </Button>
         </div>
       </div>
-      <div className="relative">
+      <div className="relative flex-1">
         <img
           src={currentProduct.image}
           alt={currentProduct.name}
