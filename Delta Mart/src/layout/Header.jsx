@@ -15,7 +15,7 @@ function Header() {
           </Link>
           <div className="flex items-center space-x-4">
             <FaSearch className="cursor-pointer" />
-            <Link to="/profile">
+            <Link to="/signup">
               <FaUser />
             </Link>
             <Link to="/cart">

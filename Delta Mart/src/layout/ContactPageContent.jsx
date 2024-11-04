@@ -1,83 +1,117 @@
 import React from "react";
+import { FaTwitter, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FiPhone, FiMapPin, FiMail } from "react-icons/fi";
 
 function ContactPageContent() {
   return (
-    <div className="p-4 md:p-8 bg-white">
-      <section className="mb-8 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold mb-2">
-          Get in touch today!
-        </h1>
-        <p className="text-gray-600 mb-4">
-          We know how large objects will act, but things on a small scale just
-          do not act that way.
-        </p>
-        <p className="text-gray-700 mb-2">
-          Phone: <span className="font-semibold">+451 215 215</span>
-        </p>
-        <p className="text-gray-700">
-          Fax: <span className="font-semibold">+451 215 215</span>
-        </p>
-        <div className="flex justify-center space-x-4 mt-4">
-          {/* Add social media icons here */}
-          <a href="#" className="text-blue-500">
-            Facebook
-          </a>
-          <a href="#" className="text-blue-500">
-            Instagram
-          </a>
-          <a href="#" className="text-blue-500">
-            Twitter
-          </a>
-        </div>
-        <img
-          src="https://via.placeholder.com/300x600" // Replace with your image URL
-          alt="Placeholder"
-          className="mx-auto rounded-lg shadow-md"
-        />
-      </section>
-
-      <section className="mb-8">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-black text-center">
-          We help small businesses with big ideas
-        </h2>
-        <div className="flex flex-col space-y-4">
-          <div className="border p-4 rounded-lg shadow-md">
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="flex flex-col">
-                <p className="text-gray-800">georgia.young@example.com</p>
-              </div>
-              <div className="flex space-x-2 mt-2 md:mt-0">
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
-                  Get Support
-                </button>
-                <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded-lg">
-                  Submit Request
-                </button>
-              </div>
+    <div className="bg-white">
+      <div className="max-w-6xl mx-auto">
+        {/* Hero Section */}
+        <div className="grid md:grid-cols-2 gap-8 items-center p-4 md:p-8">
+          <div className="text-center md:text-left">
+            <p className="text-sm font-bold text-gray-800 mb-4">CONTACT US</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-[#252B42] mb-4">
+              Get in touch today!
+            </h1>
+            <p className="text-gray-600 mb-6">
+              We know how large objects will act, but things on a small scale
+            </p>
+            <div className="space-y-4 mb-6">
+              <p className="text-[#252B42]">
+                Phone: <span className="font-bold">+451 215 215</span>
+              </p>
+              <p className="text-[#252B42]">
+                Fax: <span className="font-bold">+451 215 215</span>
+              </p>
+            </div>
+            <div className="flex justify-center md:justify-start space-x-4">
+              <a href="#" className="text-[#252B42] hover:text-[#23A6F0]">
+                <FaTwitter size={24} />
+              </a>
+              <a href="#" className="text-[#252B42] hover:text-[#23A6F0]">
+                <FaFacebook size={24} />
+              </a>
+              <a href="#" className="text-[#252B42] hover:text-[#23A6F0]">
+                <FaInstagram size={24} />
+              </a>
+              <a href="#" className="text-[#252B42] hover:text-[#23A6F0]">
+                <FaLinkedin size={24} />
+              </a>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between border p-4 rounded-lg shadow-md">
-            <p className="text-gray-800">georgia.young@example.com</p>
-            <div className="flex space-x-2 mt-2 md:mt-0">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-lg">
-                Get Support
+          <div>
+            <img
+              src="https://picsum.photos/800/600"
+              alt="Happy family shopping"
+              className="rounded-lg w-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Visit Office Section */}
+        <section className="py-16 px-4">
+          <h2 className="text-center text-2xl md:text-3xl font-bold text-[#252B42] mb-4">
+            We help small businesses
+          </h2>
+          <h3 className="text-center text-2xl md:text-3xl font-bold text-[#252B42] mb-12">
+            with big ideas
+          </h3>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Phone Card */}
+            <div className="text-center p-6">
+              <FiPhone className="w-20 h-20 text-[#23A6F0] mx-auto mb-4" />
+              <p className="text-sm text-gray-600 mb-2">
+                georgia.young@example.com
+              </p>
+              <p className="text-sm text-gray-600 mb-4">
+                georgia.young@ple.com
+              </p>
+              <button className="font-bold text-sm mb-2">Get Support</button>
+              <button className="block w-full py-3 px-4 text-[#23A6F0] border border-[#23A6F0] rounded-md hover:bg-[#23A6F0] hover:text-white transition-colors">
+                Submit Request
               </button>
-              <button className="border border-blue-500 text-blue-500 px-4 py-2 rounded-lg">
+            </div>
+
+            {/* Location Card */}
+            <div className="text-center p-6 bg-[#252B42] text-white">
+              <FiMapPin className="w-20 h-20 text-[#23A6F0] mx-auto mb-4" />
+              <p className="text-sm mb-2">georgia.young@example.com</p>
+              <p className="text-sm mb-4">georgia.young@ple.com</p>
+              <button className="font-bold text-sm mb-2">Get Support</button>
+              <button className="block w-full py-3 px-4 text-white border border-white rounded-md hover:bg-white hover:text-[#252B42] transition-colors">
+                Submit Request
+              </button>
+            </div>
+
+            {/* Mail Card */}
+            <div className="text-center p-6">
+              <FiMail className="w-20 h-20 text-[#23A6F0] mx-auto mb-4" />
+              <p className="text-sm text-gray-600 mb-2">
+                georgia.young@example.com
+              </p>
+              <p className="text-sm text-gray-600 mb-4">
+                georgia.young@ple.com
+              </p>
+              <button className="font-bold text-sm mb-2">Get Support</button>
+              <button className="block w-full py-3 px-4 text-[#23A6F0] border border-[#23A6F0] rounded-md hover:bg-[#23A6F0] hover:text-white transition-colors">
                 Submit Request
               </button>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="text-center">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-          WE Can't WAIT TO MEET YOU
-        </h2>
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg w-full md:w-auto">
-          Let’s Talk
-        </button>
-      </section>
+        {/* CTA Section */}
+        <section className="text-center py-16 px-4">
+          <p className="text-sm font-bold text-gray-800 mb-4">
+            WE Can't WAIT TO MEET YOU
+          </p>
+          <h2 className="text-4xl font-bold text-[#252B42] mb-6">Let's Talk</h2>
+          <button className="bg-[#23A6F0] text-white px-8 py-3 rounded-md hover:bg-[#1a7ab3] transition-colors">
+            Try it free now
+          </button>
+        </section>
+      </div>
     </div>
   );
 }
