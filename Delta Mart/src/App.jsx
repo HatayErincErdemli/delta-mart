@@ -10,6 +10,8 @@ import AboutUsPage from "./pages/AboutUsPage";
 import ContactPage from "./pages/ContactPage";
 import TeamPage from "./pages/TeamPage";
 import SingUpFormPage from "./layout/SingUpFormPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -23,6 +25,17 @@ function App() {
         <Route path="/team" component={TeamPage} />
         <Route path="/signup" component={SingUpFormPage} />
       </Switch>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }
